@@ -10,7 +10,8 @@
     "link": "npm run clean && npm run tsc && npm link",
     "tsc:watch": "npm run build && npm run tsc -- -w",
     "lint": "tslint -p tsconfig.json -c tslint.json",
-    "lint-fix": "npm run lint -- --fix"
+    "lint-fix": "npm run lint -- --fix",
+    "test": "npm run link && gradlew-update"
   },
   "bin": {
     "gradlew-update": "./bin/main.js"
@@ -18,6 +19,11 @@
   "repository": "https://github.com/Jawnnypoo/gradlew-update",
   "author": "Jawnnypoo",
   "license": "MIT",
+  "keywords": [
+    "gradlew",
+    "gradle",
+    "version"
+  ],
   "devDependencies": {
     "@types/node": "^8.0.53",
     "rimraf": "^2.6.2",
