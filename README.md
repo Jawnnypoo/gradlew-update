@@ -4,7 +4,7 @@ Update your gradle wrapper to the latest and greatest
 
 ## Installation
 ```
-npm install gradlew-update -g
+npm install -g gradlew-update
 ```
 
 ## Usage
@@ -17,4 +17,9 @@ gradlew-update
 To test the command globally on your machine:
 ```
 npm run link
+gradlew-update
 ```
+
+## License
+
+gradlew-update is available under the MIT license. See the LICENSE file for more info.
