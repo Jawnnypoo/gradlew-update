@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
-import { Factorial } from './utils/factorial';
 import * as fs from 'fs'
 import axios from 'axios';
-
-const { spawnSync } = require('child_process')
+import { Commands } from './utils/commands';
+import { Asserts } from './utils/asserts';
 
 axios({
     method: 'get',
@@ -13,13 +12,14 @@ axios({
 })
     .then(function (response) {
         const version = response.data
-        console.log(`Upgrading to ${version}`)
-        if (fs.existsSync('gradlew') || fs.existsSync('gradlew.bat')) {
-            const gradle = spawnSync('gradlew.bat', ['-lh', '/usr']);
-            console.log(`stderr: ${gradle.stderr.toString()}`);
-            console.log(`stdout: ${gradle.stdout.toString()}`);
+        Asserts.assertGradlewExists()
+        const currentVersion = Commands.runVersionCommand()
+        if (currentVersion == version) {
+            console.log(`Already on the latest stable version of Gradle: ${version}`)
         } else {
-            console.log('Gradle wrapper not found in current directory')
+            console.log(`Updating to ${version}...`)
+            Commands.runUpgradeCommand(version)
+            console.log(`Successfully updated to ${version}`)
         }
     })
     .catch(err => {
