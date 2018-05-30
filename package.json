@@ -15,6 +15,7 @@
   "bin": {
     "gradlew-update": "./bin/main.js"
   },
+  "repository": "https://github.com/Jawnnypoo/gradlew-update",
   "author": "Jawnnypoo",
   "license": "MIT",
   "devDependencies": {
