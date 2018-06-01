@@ -5,7 +5,7 @@
   "main": "bin/main.js",
   "scripts": {
     "clean": "rimraf bin",
-    "tsc": "tsc --outDir bin",
+    "tsc": "tsc",
     "build": "npm run clean && npm run tsc",
     "link": "npm run clean && npm run tsc && npm link",
     "tsc:watch": "npm run build && npm run tsc -- -w",
@@ -31,5 +31,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0"
+  },
+  "engines": {
+    "node": "8.11.2"
   }
 }

@@ -10,6 +10,9 @@
     "module": "commonjs",
     "noImplicitAny": true,
     "target": "es6",
-    "alwaysStrict": true
+    "alwaysStrict": true,
+    "outDir": "bin",
+    "rootDir": "src",
+    "sourceMap": true
   }
 }
