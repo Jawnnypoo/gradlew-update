@@ -7,9 +7,8 @@
             "env": {
                 "NODE_ENV": "development"
             },
-            "externalConsole": false,
             "name": "DEBUG",
-            "outDir": "${workspaceRoot}/bin",
+            "outFiles": ["${workspaceRoot}/bin/**/*.js"],
             "preLaunchTask": "compile",
             "program": "${workspaceRoot}/src/main.ts",
             "request": "launch",
