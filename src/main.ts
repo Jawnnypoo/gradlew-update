@@ -5,6 +5,8 @@ import axios from 'axios';
 import { Commands } from './utils/commands';
 import { Asserts } from './utils/asserts';
 
+Asserts.assertGradlewExists()
+
 axios({
     method: 'get',
     url: 'https://gradle-version.glitch.me/',
@@ -12,7 +14,6 @@ axios({
 })
     .then(function (response) {
         const version = response.data
-        Asserts.assertGradlewExists()
         const currentVersion = Commands.runVersionCommand()
         if (currentVersion == version) {
             console.log(`Already on the latest stable version of Gradle: ${version}`)
