@@ -1,6 +1,6 @@
 {
   "name": "gradlew-update",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Update your gradle wrapper to the latest and greatest",
   "main": "bin/main.js",
   "scripts": {
