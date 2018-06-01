@@ -1,6 +1,6 @@
 {
   "name": "gradlew-update",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Update your gradle wrapper to the latest and greatest",
   "main": "bin/main.js",
   "scripts": {
@@ -9,9 +9,8 @@
     "build": "npm run clean && npm run tsc",
     "link": "npm run clean && npm run tsc && npm link",
     "tsc:watch": "npm run build && npm run tsc -- -w",
-    "lint": "tslint -p tsconfig.json -c tslint.json",
-    "lint-fix": "npm run lint -- --fix",
-    "test": "npm run link && gradlew-update"
+    "test": "npm run link && gradlew-update",
+    "release": "npm run build && npm publish"
   },
   "bin": {
     "gradlew-update": "./bin/main.js"
