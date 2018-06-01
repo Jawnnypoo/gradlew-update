@@ -30,7 +30,7 @@ export class Commands {
         const platform = os.platform();
         let command = "./gradlew"
         if (platform == "win32") {
-            command.replace('./gradlew', 'gradlew.bat')
+            command = command.replace('./gradlew', 'gradlew.bat')
         }
         const gradle = spawnSync(command, args);
         if (gradle.stderr.length > 0) {
