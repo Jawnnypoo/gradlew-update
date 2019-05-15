@@ -1,12 +1,11 @@
 #!/usr/bin/env node
-
-import * as fs from 'fs'
 import axios from 'axios';
 import { Commands } from './utils/commands';
 import { Asserts } from './utils/asserts';
 
 Asserts.assertGradlewExists()
 
+console.log(`Finding the latest Gradle version. This could take a few seconds...`)
 axios({
     method: 'get',
     url: 'https://gradle-version.glitch.me/',
