@@ -1,5 +1,7 @@
 # gradlew-update
 
+![npm](https://img.shields.io/npm/v/gradlew-update)
+
 Update your Gradle wrapper to the latest and greatest
 
 ## Installation
