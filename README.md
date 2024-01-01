@@ -1,6 +1,6 @@
 # gradlew-update
 
-![npm](https://img.shields.io/npm/v/gradlew-update)
+[![](https://img.shields.io/npm/v/gradlew-update)](https://www.npmjs.com/package/gradlew-update)
 
 Update your Gradle wrapper to the latest and greatest
 
