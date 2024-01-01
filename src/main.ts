@@ -9,7 +9,7 @@ console.log(`Fetching the latest Gradle version...`)
 // See https://github.com/Jawnnypoo/gradlew-update-service for the source of this endpoint
 axios({
     method: 'get',
-    url: 'https://gradlew-update-service.fly.dev/',
+    url: 'https://gradle-version.glitch.me/',
     responseType: 'text'
 })
     .then(function (response) {
